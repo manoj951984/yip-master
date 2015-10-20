@@ -1,0 +1,16 @@
+<% flash.each do |name, msg| %>
+  <% error_class = name == 'alert' ? "alert-danger" : "alert-success" %>
+  <div class='alert <%= error_class %> alert-dismissable'>
+    <a class="close" data-dismiss="alert" href="#">&times;
+    </a>
+    <center>
+      <% if msg.is_a?(String) %>
+        <%= content_tag :div, msg.html_safe, :id => "flash_#{name}" %>
+      <% elsif msg.is_a?(Array) %>
+        <%= content_tag :div, msg.first.html_safe, :id => "flash_#{name}" %>  
+      <% end %>
+    </center>  
+  </div>
+  <% flash.discard(name) %>
+<% end %>
+

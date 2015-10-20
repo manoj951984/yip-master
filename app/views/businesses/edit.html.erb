@@ -1,0 +1,62 @@
+<div class="section section-breadcrumbs">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Business Information</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="basic-login">
+          <%= simple_nested_form_for(@business) do |f| %>
+            
+            <div class="form-group">
+              <label for="name"><i class="icon-user"></i> <b>Name</b></label>
+              <%= f.text_field :name, :class => 'form-control', :input_html => {:size => 50} %>
+            </div>
+            
+            <div class="form-group">
+              <label for="name"><i class="icon-user"></i> <b>Address Line1</b></label>
+              <%= f.text_field :add1, :class => 'form-control', :input_html => {:size => 50} %>
+            </div>
+            
+            <div class="form-group">
+              <label for="name"><i class="icon-user"></i> <b>Address Line2</b></label>
+              <%= f.text_field :add2, :class => 'form-control', :input_html => {:size => 50} %>
+            </div>
+            
+            <div class="form-group">
+              <label for="name"><i class="icon-user"></i> <b>City</b></label>
+              <%= f.text_field :city, :class => 'form-control', :input_html => {:size => 50} %>
+            </div>
+            
+            <div class="form-group">
+              <label for="name"><i class="icon-user"></i> <b>State</b></label>
+              <%= f.text_field :state, :class => 'form-control', :input_html => {:size => 50} %>
+            </div>
+            
+            <div class="form-group">
+              <label for="name"><i class="icon-user"></i> <b>Zip</b></label>
+              <%= f.text_field :zip, :class => 'form-control', :input_html => {:size => 50} %>
+            </div>
+            
+            <div class="form-group">
+              <label for="name"><i class="icon-user"></i> <b>Phone</b></label>
+              <%= f.text_field :phone, :class => 'form-control', :input_html => {:size => 50} %>
+            </div>
+            
+            <div class="form-group">
+              <button class="btn pull-right" type="submit">Update</button>
+              <div class="clearfix"></div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

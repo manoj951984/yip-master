@@ -1,0 +1,86 @@
+<div class="section section-breadcrumbs">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Profile</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-2">
+        <%= link_to "Post Photo", "javascript:void(0)" %>
+      </div>
+      <div class="col-sm-2">
+        <%= link_to "Profile Information", edit_customer_path(@customer) %>
+      </div>
+      <div class="col-sm-8">
+        <%= link_to "Business search", "javascript:void(0)" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-1">
+        <strong>Name: </strong>
+      </div>
+      <div class="col-sm-10">
+        <%= @customer.name %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-1">
+        <strong>Username: </strong>
+      </div>
+      <div class="col-sm-10">
+        <%= @customer.username %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-1">
+        <strong>DOB: </strong>
+      </div>
+      <div class="col-sm-10">
+        <%= @customer.dob %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-1">
+        <strong>Address: </strong>
+      </div>
+      <div class="col-sm-10">
+        <%= @customer.add1 %> <%= @customer.add2 %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-1">
+        <strong>City: </strong>
+      </div>
+      <div class="col-sm-10">
+        <%= @customer.city %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-1">
+        <strong>State: </strong>
+      </div>
+      <div class="col-sm-10">
+        <%= @customer.state %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-1">
+        <strong>Zip: </strong>
+      </div>
+      <div class="col-sm-10">
+        <%= @customer.zip %>
+      </div>
+    </div>
+  </div>
+</div>
